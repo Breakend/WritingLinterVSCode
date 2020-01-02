@@ -1,0 +1,36 @@
+{
+	"name": "writing-linter-breakend",
+	"private": true,
+	"displayName": "Writing Linter (mostly for scientific writing)",
+	"version": "0.0.2",
+	"publisher": "breakend",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Breakend/WritingLinterVSCode"
+	},
+	"bugs": {
+		"url": "https://github.com/Breakend/WritingLinterVSCode/issues"
+	},
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:markdown"
+	],
+	"main": "./out/extension.js",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "tslint -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^10.12.18",
+		"tslint": "^5.16.0",
+		"typescript": "^3.5.1",
+		"@types/vscode": "^1.32.0"
+	}
+}
